@@ -1,0 +1,113 @@
+/* 1. Organização: Uso obrigatório de box-sizing no seletor universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 2. Background: Uso de linear-gradient */
+body {
+    background: linear-gradient(135deg, #020111 0%, #050b30 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 30px 10%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00f2ff;
+}
+
+/* 3. Layout CSS (Flexbox): Centralizado e em duas colunas */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 0 10%;
+    gap: 40px;
+}
+
+.coluna-texto {
+    flex: 1;
+}
+
+.coluna-texto h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #00f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.coluna-texto p {
+    font-size: 1.1rem;
+    color: #a0a0b8;
+    margin-bottom: 40px;
+}
+
+/* 4. Formulário: Elementos empilhados verticalmente com Flexbox */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 350px;
+}
+
+form input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #1a1a3a;
+    background: #0a0a20;
+    color: white;
+}
+
+/* 5. Interação: Efeito :hover no botão */
+form button {
+    padding: 18px;
+    background-color: #00f2ff;
+    color: #050b30;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #00c8d4; /* Muda a cor */
+    transform: translateY(-3px); /* Muda o tamanho/posição */
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.4);
+}
+
+/* 6. Imagem: Uso de filter: drop-shadow() */
+.coluna-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna-imagem img {
+    max-width: 450px;
+    /* Aplicação do filtro conforme solicitado */
+    filter: drop-shadow(0px 0px 30px #00f2ff66);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8rem;
+    color: #4a4a6a;
+}
